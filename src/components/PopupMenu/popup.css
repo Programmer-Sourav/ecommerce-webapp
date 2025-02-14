@@ -1,0 +1,51 @@
+.popup-content{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 8px;
+    border: 1px solid gainsboro;
+    width: 172px;
+    height: 192px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    align-content: start;
+    border-radius: 8px;
+}
+
+.popup{
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    width: 16px;
+    height: 16px;
+    }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .btn-open{
+    height: 40px;
+    padding: 8px;
+  }
+  .parent{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .filter-item{
+    width: auto;
+    height: 36px;
+    text-align: start;
+    padding-left: 8px;
+  }
+
+  .filter-item:hover{
+    cursor: pointer;
+  }

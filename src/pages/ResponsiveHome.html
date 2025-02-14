@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation Bar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="rhstyles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <span class="material-icons menu-icon" id="menu-toggle">menu</span>
+        <span class="brand-name">ascolour</span>
+      </div>
+      <div class="navbar-right">
+        <span class="material-icons nav-icon">search</span>
+        <span class="material-icons nav-icon">shopping_cart</span>
+        <span class="material-icons nav-icon">account_circle</span>
+      </div>
+    </nav>
+    <div class="menu-list" id="menu-list">
+      <ul>
+        <li>Home</li>
+        <li>Shop</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="content">
+      <h1>Find Your New Favorite Cap</h1>
+      <p>
+        Discover our Cap collection, designed with the utmost care and attention to detail, and in a style matching your personal preferences.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuList = document.getElementById('menu-list');
+
+    menuToggle.addEventListener('click', () => {
+      menuList.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

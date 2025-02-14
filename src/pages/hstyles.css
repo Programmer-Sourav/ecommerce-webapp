@@ -1,0 +1,298 @@
+.header-pc {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height:  3rem;
+    padding: 8px;
+    height: 72px;
+    background-color: white;
+    border-bottom: gainsboro 2px solid;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header-right {
+    width: auto; /* Match the parent's width */
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Corrected to align items vertically in the flex container */
+    margin-right: 0; /* Remove margin-right to align it with the parent */
+}
+.header-right span{
+    align-self: center;
+    height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.btn-content{
+    display: none;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 0.7fr 3.3fr; /* Sidebar takes less space */
+    grid-template-rows: auto 1fr; /* Promo banner in first row, grid takes second */
+    gap: 8px;
+    padding: 8px;
+  }
+  
+  .filter-sidebar {
+    grid-row: span 2; /* Make sidebar span both rows */
+    border-right: 1px solid #ccc;
+    padding-right: 10px; /* Reduced padding for a smaller sidebar */
+    height: 100vh;
+    padding-left: 8px;
+  }
+  
+  .filter-sidebar h3 {
+    font-size: 1rem;
+    color: gray;
+  }
+  
+  .filter-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .filter-sidebar li {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .promo-banner {
+    grid-column: span 1; /* Occupies the right space horizontally next to the sidebar */
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 4px 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .promo-banner span {
+    color: green;
+  }
+  
+  .sale {
+    font-size: 1.2rem;
+    background-color: green;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .product-grid {
+    grid-column: span 1; /* Full width below the promo banner */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+    gap: 8px;
+  }
+  
+  .product-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .product-item h4 {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .sale-price {
+    color: green;
+    font-weight: bold;
+  }
+  .sort-icon-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  @media(max-width: 376px){
+    .sort-icon-flex{
+      display: flex;
+      justify-content: space-evenly;
+    }
+   .sort-icon-flex label{
+      width: auto;
+      font-size: 14.5px;
+      text-align: center;
+      align-content: center;
+   }
+   .sort-icon-flex span{
+     width: 20px;
+     height: 20px;
+   }
+   .header-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header-right span{
+    align-self: center;
+    height: 24px;
+    font-size: 16px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.right-side-flex{
+  align-self: center;
+  height: 24px;
+  font-size: 16px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+  .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+      }
+      .btn-content {
+        width: 100%;
+        margin: 16px auto; /* Centers the button horizontally within its container */
+        border: 1px solid black;
+        height: 48px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center; /* Vertically align content */
+        justify-content: space-between; /* Space icons and text */
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0 16px; /* Add padding for internal spacing */
+        box-sizing: border-box;
+        position: relative; /* Prevents floating or overlapping issues */
+        background-color: white; /* Ensure a consistent background */
+        z-index: 1; /* Stack below the header if necessary */
+    }
+    
+    .filter-icon, .up-arrow-icon {
+        font-size: 24px; /* Adjust icon size */
+    }
+    
+    .btn-content span {
+        display: flex;
+        align-items: center; /* Vertically align icons */
+    }
+    
+    .btn-content p {
+        margin: 0;
+        text-align: center; /* Center-align text */
+        flex-grow: 1; /* Allow text to take up space between icons */
+    }
+
+    .filter-sidebar{
+        display: none;
+    }
+    .promo-banner {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 4px 0;
+        font-size: 1.3rem;
+        font-weight: bold;
+        width: 100%;
+      }
+      .product-grid {
+        grid-column: span 1; /* Full width below the promo banner */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(376px, 1fr));
+        gap: 8px;
+      }
+  }
+  
+
+
+  @media(min-width: 377px) and (max-width: 667px){
+    .sort-options{
+       width: auto;
+       font-size: 12px;
+       text-align: center;
+       font-weight: 400;
+    }
+    
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+      }
+      .btn-content {
+        width: 100%;
+        margin: 16px auto; /* Centers the button horizontally within its container */
+        border: 1px solid black;
+        height: 48px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center; /* Vertically align content */
+        justify-content: space-between; /* Space icons and text */
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0 16px; /* Add padding for internal spacing */
+        box-sizing: border-box;
+        position: relative; /* Prevents floating or overlapping issues */
+        background-color: white; /* Ensure a consistent background */
+        z-index: 1; /* Stack below the header if necessary */
+    }
+    
+    .filter-icon, .up-arrow-icon {
+        font-size: 24px; /* Adjust icon size */
+    }
+    
+    .btn-content span {
+        display: flex;
+        align-items: center; /* Vertically align icons */
+    }
+    
+    .btn-content p {
+        margin: 0;
+        text-align: center; /* Center-align text */
+        flex-grow: 1; /* Allow text to take up space between icons */
+    }
+
+    .filter-sidebar{
+        display: none;
+    }
+    .promo-banner {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 4px 0;
+        font-size: 1.3rem;
+        font-weight: bold;
+        width: 100%;
+      }
+      .product-grid {
+        grid-column: span 1; /* Full width below the promo banner */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(530px, 1fr));
+        gap: 8px;
+      }
+      .header-right{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
+  }
+  

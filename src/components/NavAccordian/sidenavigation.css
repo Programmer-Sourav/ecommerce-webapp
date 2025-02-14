@@ -1,0 +1,36 @@
+.accordion {
+  width: auto;
+  margin: auto;
+}
+
+.accordianitem{
+  min-height: 48px;
+  margin: 8px;
+  padding: 8px;
+  max-width: 152px;
+  border-bottom: 1px solid gainsboro;
+}
+.listitem{
+  list-style: none;
+}
+.accordion-title {
+  width: 100%;
+  text-align: left;
+  padding: 8px;
+  font:lighter;
+  background: #f4f4f4;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  
+}
+
+.accordion-content.open {
+  max-height: 108px; /* Adjust based on content */
+}

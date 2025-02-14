@@ -1,0 +1,273 @@
+.header{
+    display: flex;
+    height: 88px;
+    width: 100%;
+    align-items: center;
+    /* background-color: #E5E4E2; */
+    background-color:#000000;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visual separation */
+    margin-bottom: 2rem;
+    top: 0;
+    /* margin-right: 4%; */
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    /* margin-left: -16px; */
+}
+.logocontainer{
+    margin-left: 2%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.logo-container{
+    height: 80px;
+    min-width: 128px;
+    object-fit: cover;
+    align-self: center;
+}
+.nav-menu{
+    display: flex;
+    height: 100%;
+    min-width: 392px;
+    justify-content: space-evenly;
+    margin-right: 24%;
+}
+.login-menu{
+    display: flex;
+    min-width: 200px;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-right: 2.5%;
+}
+.login-menu-icons{
+    display: none;
+}
+.nav-menu h4{
+    margin: 12px;
+    align-content: center;
+    color: white;
+}
+.nav-menu h4:hover{
+    align-content: center;
+    cursor: pointer;
+}
+.top-nav-btn img {
+    width: 32px;
+    height: 32px;
+}
+.top-nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 8px;
+    color: white;
+}
+.top-nav-btn-2 {
+    background: #89CFF0;
+    border-radius: 32px;
+    width: 140px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 8px;
+    border-radius: 16px;
+    color: white;
+}
+.top-nav-btn-2 :hover{
+  transition: 0.3s ease ease-in;
+}
+
+.top-nav-btn .icon-wrapper {
+    display: flex;
+    align-items: center; /* Center image vertically within wrapper */
+    margin-right: 8px; /* Space between image and text */
+}
+.top-nav-btn p {
+    margin: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center; /* Center text vertically */
+}
+.top-nav-btn:focus{
+    outline: none;
+}
+
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+/* Responsive Design */
+  @media (max-width: 376px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      height: 48px; /* Reduce height for smaller screens */
+      padding: 0 8px;
+      position: fixed;
+      transform: translateY(0); /* Initial position */
+      transition: transform 0.3s ease-in-out; /* Smooth hiding/revealing */
+      z-index: 10;
+      box-sizing: border-box;
+    }
+  
+    /* Hide full navigation and login menu on small devices */
+    .nav-menu,
+    .login-menu {
+      display: none;
+    }
+  
+    /* Show menu icon for hamburger menu */
+    .menu-icon {
+      display: block;
+      color: white;
+    }
+  
+    /* Adjust logo container for smaller height */
+    .logo-container {
+      height: 48px;
+      min-width: 100px;
+    }
+  
+    /* Menu List for Hamburger Menu */
+    .menu-list { 
+      flex-direction: column; /* Show as a vertical list */
+      position: absolute;
+      top: 64px; /* Position below header */
+      left: 0;
+      width: 100%; /* Full-width dropdown */
+      background-color: #000000;
+      height: 100vh;
+      z-index: 999; /* Ensure it is above other elements */
+      padding: 16px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+  
+    /* Menu list items styling */
+    .menu-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .menu-list ul li {
+      padding: 10px 20px;
+      text-align: left;
+      color: white;
+      font-size: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  
+    .menu-list ul li:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+    }
+  
+    /* Show login icons instead of the full menu */
+    .login-menu-icons {
+      display: flex;
+      gap: 12px;
+      color: white;
+      margin-right: 2%;
+    }
+  }
+  
+  /* Show/hide menu-list on hamburger click */
+  .menu-icon.active + .menu-list {
+    display: flex; /* Show menu list */
+  }
+
+
+
+  @media (min-width: 377px) and (max-width: 541px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 100%;
+      height: 64px; /* Reduce height for smaller screens */
+      padding: 0 8px;
+      position: fixed;
+      transform: translateY(0); /* Initial position */
+      transition: transform 0.3s ease-in-out; /* Smooth hiding/revealing */
+      z-index: 10;
+    }
+  
+    /* Hide full navigation and login menu on small devices */
+    .nav-menu,
+    .login-menu {
+      display: none;
+    }
+  
+    /* Show menu icon for hamburger menu */
+    .menu-icon {
+      display: block;
+      color: white;
+    }
+  
+    /* Adjust logo container for smaller height */
+    .logo-container {
+      height: 48px;
+      min-width: 100px;
+    }
+  
+    /* Menu List for Hamburger Menu */
+    .menu-list { 
+      flex-direction: column; /* Show as a vertical list */
+      position: absolute;
+      top: 64px; /* Position below header */
+      left: 0;
+      width: 100%; /* Full-width dropdown */
+      background-color: #000000;
+      height: 100vh;
+      z-index: 999; /* Ensure it is above other elements */
+      padding: 16px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+  
+    /* Menu list items styling */
+    .menu-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .menu-list ul li {
+      padding: 10px 20px;
+      text-align: left;
+      color: white;
+      font-size: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  
+    .menu-list ul li:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+    }
+  
+    /* Show login icons instead of the full menu */
+    .login-menu-icons {
+      display: flex;
+      gap: 12px;
+      color: white;
+      margin-right: 12%;
+    }
+  }
+  
+  /* Show/hide menu-list on hamburger click */
+  .menu-icon.active + .menu-list {
+    display: flex; /* Show menu list */
+  }
