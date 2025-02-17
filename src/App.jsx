@@ -15,11 +15,11 @@ function App() {
       {/* <Header/> */}
       {/* <BodyContent/> */}
       {/* <ProductContent/> */}
-      {/* <HomePage/> */}
+      <HomePage/>
       {/* <SideNavigation/> */}
       {/* <PopupMenu/> */}
       {/* <UsePopup/> */}
-      <Carousel/>
+      {/* <Carousel/> */}
     </>
   )
 }

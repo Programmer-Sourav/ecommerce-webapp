@@ -115,8 +115,8 @@ export default function Carousel(){
             <img src={RightArrow} alt="right-arrow" onClick={nextSlide} className="arrow arrow-right"/>
           
         </div>
-        <h3>Hoody!</h3>
-        <p>Rs. 2500</p>
+        <h3 className="h3style">Hoody!</h3>
+        <p className="pstyle">Rs. 2500</p>
        
         <div className="colorcontainerparent">
         <img src={LeftArrow} alt="left-arrow" onClick={scrollLeft} className="arrow1 arrow1-left"/>
@@ -129,6 +129,7 @@ export default function Carousel(){
         </div>
         <img src={RightArrow} alt="right-arrow" onClick={scrollRight} className="arrow1 arrow1-right"/>
         </div>
+        <p className="bottom-banner">S M L XL 2XL 3XL 4XL 5XL</p>
         </div>
     )
 }

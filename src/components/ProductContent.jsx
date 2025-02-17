@@ -2,6 +2,7 @@ import "../pages/hstyles.css"
 import SideNavigation from "./NavAccordian/SideNavigation"
 import PopupMenu from "./PopupMenu/PopupMenu"
 import "../components/PopupMenu/popup.css"
+import Carousel from "./ImageCarousel/Carousel";
 
 export default function ProductContent(){
 
@@ -58,25 +59,40 @@ export default function ProductContent(){
              <p>30% off <span>Everything</span> <span class="sale">SALE</span></p>
              </section>
                 <section className="product-grid">
-                <div className="product-item">
+                {/* <div className="product-item">
                 <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
                 <h4>Classic Tee1 | 5026</h4>
                  <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
                  <p>Relaxed Fit - 6.5 oz</p>
-                </div>
-                <div className="product-item">
+                </div> */}
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                <Carousel/>
+                {/* <div className="product-item">
                 <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
                 <h4>Classic Tee2 | 5026</h4>
                  <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
                  <p>Relaxed Fit - 6.5 oz</p>
-                </div>
-                <div className="product-item">
+                </div> */}
+                {/* <div className="product-item">
                 <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
                 <h4>Classic Tee3 | 5026</h4>
                  <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
                  <p>Relaxed Fit - 6.5 oz</p>
-                </div>
-                <div className="product-item">
+                </div> */}
+                {/* <div className="product-item">
                 <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
                 <h4>Classic Tee4 | 5026</h4>
                  <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
@@ -129,7 +145,7 @@ export default function ProductContent(){
                 <h4>Classic Tee12 | 5026</h4>
                  <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
                  <p>Relaxed Fit - 6.5 oz</p>
-                </div>
+                </div> */}
                 </section>
              </main>
         </div>

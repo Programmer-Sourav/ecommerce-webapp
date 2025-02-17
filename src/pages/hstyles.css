@@ -42,7 +42,7 @@
   .filter-sidebar {
     grid-row: span 2; /* Make sidebar span both rows */
     border-right: 1px solid #ccc;
-    padding-right: 10px; /* Reduced padding for a smaller sidebar */
+    padding-right: 8px; /* Reduced padding for a smaller sidebar */
     height: 100vh;
     padding-left: 8px;
   }
