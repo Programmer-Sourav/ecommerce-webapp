@@ -33,7 +33,7 @@
 
 .main-content {
     display: grid;
-    grid-template-columns: 0.7fr 3.3fr; /* Sidebar takes less space */
+    grid-template-columns: 0.7fr 2.3fr; /* Sidebar takes less space */
     grid-template-rows: auto 1fr; /* Promo banner in first row, grid takes second */
     gap: 8px;
     padding: 8px;
