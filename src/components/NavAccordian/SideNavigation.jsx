@@ -3,11 +3,17 @@ import "./sidenavigation.css"
 import { productNavigationData } from "../../data/productdata"
 import ExpandIcon from "../../assets/expand.png"
 import CollapseIcon from "../../assets/collapse.png"
+import { useDispatch, useSelector } from "react-redux"
+import { updateCheckbox } from "../../redux/productSlice"
 
 export default function SideNavigation(){
 
   const [navigationData, setNavigationData] = useState(productNavigationData)
   const [elementsStored, setElementsStored] = useState([])
+  //const [selectedCheckbox, setSelectedCheckbox] = useState([])
+  const dispatch = useDispatch();
+  const {products, status, error, selectedFilters} = useSelector((state)=>state.products)
+  console.log(666, selectedFilters)
 
 
 function getTheAccordians(){
@@ -30,8 +36,9 @@ const expandOrCollapse = (genreId, value) =>{
 }
 
 
-const onCheckboxChange = () =>{
-
+const onCheckboxChange = (genreValue, checkboxValue) =>{
+  const actItem = {[genreValue]: checkboxValue}
+  dispatch(updateCheckbox(actItem))
 }
 
     return(
@@ -42,9 +49,10 @@ const onCheckboxChange = () =>{
                      {
                         <>
                         <h4><span className="accordian-title">{itemObj.genre}</span> <span><img src={itemObj.isExpanded? CollapseIcon : ExpandIcon} alt="expand" width="16px" height="16px"  onClick={()=>{expandOrCollapse(itemObj.id, itemObj.isExpanded ? false : true)}}/></span></h4>
-                        {itemObj.items && itemObj.items.map((eachItem)=>(
+                        {
+                        itemObj.items && itemObj.items.map((eachItem)=>(
                             <ul className={`accordion-content ${itemObj.isExpanded ? "open" : ""}`}>
-                            <li key={eachItem.id}><input type="checkbox" checked={{}} onChange={()=>{onCheckboxChange()}}/> {" "}{eachItem}</li>
+                            <li key={eachItem.id}><input type="checkbox" checked={selectedFilters.includes(eachItem)} onChange={()=>{onCheckboxChange(itemObj.genre, eachItem)}}/> {" "}{eachItem}</li>
                             </ul>
                         ))}
                        </>

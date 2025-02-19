@@ -3,11 +3,25 @@ import SideNavigation from "./NavAccordian/SideNavigation"
 import PopupMenu from "./PopupMenu/PopupMenu"
 import "../components/PopupMenu/popup.css"
 import Carousel from "./ImageCarousel/Carousel";
+import { useDispatch, useSelector } from "react-redux";
+import { productsData } from "../data/productdata";
+import { useEffect, useState } from "react";
 
 export default function ProductContent(){
 
  const { openPopup, closePopup, buttonRef, isOpen, position, popupRef } = PopupMenu();
+ const dispatch = useDispatch();
+ const {products, status, error, selectedFilters} = useSelector((state)=>state.products)
+ const [dummyProducts, setDummyProducts] = useState(productsData)
 
+ const filteredData = dummyProducts;
+
+ useEffect(()=>{
+   if(selectedFilters.length>0){
+        
+   }
+ }, [selectedFilters])
+ 
  const listOfFilters = [{id: 1, title: "Featured"},{id: 2, title: "Newest"}, {id: 3, title: "Price: Low to High"},{id: 4, title: "Price: High to Low"}, {id:5, title: "Best Selling"} ]
     return(
         <div> 
