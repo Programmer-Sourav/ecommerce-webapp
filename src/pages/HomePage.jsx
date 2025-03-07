@@ -4,6 +4,7 @@ import BodyContent from "../components/BodyContent";
 import Header from "../components/Header";
 import ProductContent from "../components/ProductContent";
 import { useEffect } from "react";
+import Footer from "../components/Footer";
 
 export default function HomePage(){
 
@@ -18,6 +19,7 @@ export default function HomePage(){
             <div>
             <ProductContent/>
             </div>
+            <Footer/>
         </div>
     )
 }

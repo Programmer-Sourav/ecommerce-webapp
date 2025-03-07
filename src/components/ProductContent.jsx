@@ -21,6 +21,11 @@ export default function ProductContent(){
         
    }
  }, [selectedFilters])
+
+
+ const loadmore = () =>{
+
+ }
  
  const listOfFilters = [{id: 1, title: "Featured"},{id: 2, title: "Newest"}, {id: 3, title: "Price: Low to High"},{id: 4, title: "Price: High to Low"}, {id:5, title: "Best Selling"} ]
     return(
@@ -73,12 +78,7 @@ export default function ProductContent(){
              <p>30% off <span>Everything</span> <span class="sale">SALE</span></p>
              </section>
                 <section className="product-grid">
-                {/* <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee1 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div> */}
+                {/* <Carousel/>
                 <Carousel/>
                 <Carousel/>
                 <Carousel/>
@@ -92,74 +92,13 @@ export default function ProductContent(){
                 <Carousel/>
                 <Carousel/>
                 <Carousel/>
-                <Carousel/>
-                <Carousel/>
-                {/* <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee2 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div> */}
-                {/* <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee3 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div> */}
-                {/* <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee4 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
+                <Carousel/> */}
+                {dummyProducts.map((product)=>(
+                  <Carousel/>
+                ))}
+                <div className="loadmoreparent">
+                <button onClick={loadmore} className="loadmore">Load More</button>
                 </div>
-                <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee5 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div>
-                <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee6 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div>
-                <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee7 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div>
-                <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee8 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div>
-                <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee9 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div>
-                <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee10 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div>
-                <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee11 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div>
-                <div className="product-item">
-                <img src="https://placehold.jp/392x620.png" alt="Classic Tee"/>
-                <h4>Classic Tee12 | 5026</h4>
-                 <p><span class="original-price">$22.00</span> <span class="sale-price">SALE $15.40</span></p>
-                 <p>Relaxed Fit - 6.5 oz</p>
-                </div> */}
                 </section>
              </main>
         </div>

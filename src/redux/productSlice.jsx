@@ -19,6 +19,7 @@ const productSlice = createSlice({
     initialState: {
         products: [],
         selectedFilters: [],
+        selectedFiltersWithoutCategory: [],
         status: "idle", 
         error: null
     },
@@ -30,34 +31,48 @@ const productSlice = createSlice({
            state.error = null;
         },
     updateCheckbox : (state, action) =>{
-        console.log(555, action.payload)
         const key = Object.keys(action.payload).toString().toLowerCase();
         const value = Object.values(action.payload).toString().toLowerCase();
-        console.log(5551, key, value)
+
         ///I will check if key already exists, then filter it
         ///else add key to the array
         ////for each key push the incoming elements to an array
         ////[{fit: ["Relaxed", "Regular"]}, {size: ["S", "M"]}]
-        console.log(121212, state.selectedFilters)
-        if(state.selectedFilters.includes(key)){
-            console.log(4545, state.selectedFilters)
-            // let valuesForTheKey = [];
-            // valuesForTheKey = [...valuesForTheKey, value]
-            // const itemToPush = {[key]: valuesForTheKey}
-            state.selectedFilters.reduce((acc, curItem)=>((curItem===key) ? acc.push({ [key]: [...new Set([...item[key], value])] }) : acc.push(item)), [])     
+
+        if(state.selectedFiltersWithoutCategory.includes(value)){
+             state.selectedFiltersWithoutCategory = state.selectedFiltersWithoutCategory.filter((item)=>item!==value)
         }
         else{
-            console.log(4646, state.selectedFilters)
-            let valuesForTheKey = [];
-            valuesForTheKey = [...valuesForTheKey, value]
-            const itemToPush = {[key]: valuesForTheKey}
-            state.selectedFilters.push(itemToPush)
-            console.log(777, state.selectedFilters, itemToPush)
+            state.selectedFiltersWithoutCategory.push(value)
         }
-        //switch case"gender": const {gender} = action.payload
-        //Object.key
-        console.log(4646, state.selectedFilters)
+        const keyExists = state.selectedFilters.some(item=>Object.keys(item)[0]===key)
+        if(keyExists){
+            state.selectedFilters = state.selectedFilters.reduce((acc, item)=>{
+                const existingKey = Object.keys(item)[0];
+               
+                if(existingKey === key){
+                     // Check if value already exists in the key's array
+                if (item[key]?.includes(value)) {
+                    // Remove the value from the array
+                    const filteredValues = item[key].filter((v) => v !== value);
 
+                    if (filteredValues.length > 0) {
+                        acc.push({ [key]: filteredValues });
+                    } // If empty, we remove the key entirely
+                }
+                    else{
+                    acc.push({ [key] : [...new Set([...item[key], value])]})
+                    }
+                }
+                else{
+                    acc.push(item);
+                }
+                return acc;
+            }, [])  
+        }
+        else{
+             state.selectedFilters.push({ [key]: [value] });
+        }
     }    
     },
     extraReducers : (builder) =>{

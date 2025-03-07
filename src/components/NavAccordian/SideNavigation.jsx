@@ -12,7 +12,7 @@ export default function SideNavigation(){
   const [elementsStored, setElementsStored] = useState([])
   //const [selectedCheckbox, setSelectedCheckbox] = useState([])
   const dispatch = useDispatch();
-  const {products, status, error, selectedFilters} = useSelector((state)=>state.products)
+  const {products, status, error, selectedFilters, selectedFiltersWithoutCategory} = useSelector((state)=>state.products)
   console.log(666, selectedFilters)
 
 
@@ -30,6 +30,7 @@ useEffect(()=>{
     const elements = getTheAccordians();
     setElementsStored([...elementsStored, ...elements])
 }, [])
+
 const expandOrCollapse = (genreId, value) =>{
   const updated = elementsStored.map((item)=>item.id===genreId ? {...item, isExpanded: value} : item)
   setElementsStored(updated)
@@ -52,7 +53,7 @@ const onCheckboxChange = (genreValue, checkboxValue) =>{
                         {
                         itemObj.items && itemObj.items.map((eachItem)=>(
                             <ul className={`accordion-content ${itemObj.isExpanded ? "open" : ""}`}>
-                            <li key={eachItem.id}><input type="checkbox" checked={selectedFilters.includes(eachItem)} onChange={()=>{onCheckboxChange(itemObj.genre, eachItem)}}/> {" "}{eachItem}</li>
+                            <li key={eachItem.id}><input type="checkbox" checked={selectedFiltersWithoutCategory.includes(eachItem.toLowerCase())} onChange={()=>{onCheckboxChange(itemObj.genre, eachItem)}}/> {" "}{eachItem}</li>
                             </ul>
                         ))}
                        </>

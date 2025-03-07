@@ -124,6 +124,27 @@
     justify-content: center;
     align-content: center;
   }
+
+  .loadmoreparent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1024px;
+    max-width: auto;
+    height: auto;
+  }
+  .loadmore{
+    width: 128px;
+    height: 40px;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: black;
+    color: white;
+    border-radius: 32px;
+  }
+  .loadmore:focus{
+     cursor: pointer;
+  }
   
   @media(max-width: 376px){
     .sort-icon-flex{
