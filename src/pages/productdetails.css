@@ -1,0 +1,138 @@
+.productdetails{
+    display: flex;
+    height: 100vh;
+    width: 100wh;
+    justify-content: flex-start;
+    margin-top: 88px
+}
+.leftcontainer{
+    width: 45%;
+    height: auto;
+    background-color: aqua;
+}
+
+.rightcontainer{
+    width: 55%;
+    height: auto;
+    /* background-color: aquamarine; */
+}
+
+.search-input{
+    width: 360px;
+    height: 48px;
+    font-size: 16px;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    margin-top: 32px;
+    margin-left: 32px;
+    margin-bottom: 16px;
+    margin-right: 32px;
+    padding-left: 8px;
+}
+.search-input:focus{
+    outline: none;
+}
+
+.options-span{
+    color: black;
+}
+.options-span:focus{
+    color: gainsboro;
+}
+.options-span:active{
+    color: gainsboro;
+}
+.color-holder{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 192px;
+    background-color: gainsboro;
+}
+.btn-holder{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+}
+.btn-sizes{
+    width: 72px;
+    height: 48px;
+    padding: 16px;
+    border: 0.5px solid gainsboro;
+    color: gray;
+    margin: 8px;
+    background-color: white;
+    font-weight: 600;
+}
+.panel-weight{
+    display: flex;
+
+}
+.left-panel{
+    display: flex;
+    width: 30%;
+    height: 60px;
+    border: 1px solid gainsboro;
+    margin: 8px;
+}
+.left-panel .dec-panel{
+ width: 27.5%;
+ height: auto;
+ border-right: 1px solid gainsboro;
+ font-size: 24px;
+ align-content: center;
+ text-align: center;
+}
+.left-panel .inc-panel{
+    width: 27.5%;
+    height: auto;
+    border-left: 1px solid gainsboro;
+    font-size: 24px;
+    text-align: center;
+    align-content: center;
+}
+
+.left-panel .number{
+   width: 45%;
+   height: auto;
+   font-size: 24px;
+   text-align: center;
+   align-content: center;
+}
+.right-panel{
+    width: 70%;
+    height: 60px;
+    background-color: black ;
+    color: white;
+    margin: 8px;
+    align-content: center;
+    text-align: center;
+}
+
+.accordian-container{
+    width: auto;
+    border-top: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 8px;
+ 
+}
+.accordian-content{
+    transition: max-height 0.3s ease ;
+    height: auto;
+}
+.accordion-arrow {
+    width: 16px;
+    height: 16px;
+    padding-left: 8px;
+    transition: transform 0.3s ease;
+  }
+.accordian-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}  
+

@@ -1,0 +1,49 @@
+.colorblock-purple{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: purple;
+    margin: 8px;
+}
+.colorblock-aqua{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: aqua;
+    margin: 8px;
+}
+.colorblock-cyan{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: cyan;
+    margin: 8px;
+}
+.colorblock-red{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: red;
+    margin: 8px;
+}
+.colorblock-yellow{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: yellow;
+    margin: 8px;
+}
+.colorblock-yellowgreen{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    margin: 8px;
+}
+.colorblock-gray{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 8px;
+}

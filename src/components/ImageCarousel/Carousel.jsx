@@ -101,7 +101,7 @@ export default function Carousel(){
 
             {
             arrayOfImages.map((item, index)=>(
-                <CarouselItem key={index} imageUrl={item.imageUrl} alt={item.alt} isActive={slide === index} />
+                <CarouselItem key={index} imageUrl={item.imageUrl} loading="lazy" alt={item.alt} isActive={slide === index} />
             ))
             }
             <span className="indicators">
@@ -123,7 +123,7 @@ export default function Carousel(){
         <div className="colorcontainer" ref={selectedElementRef}>
         {
             arrayOfColors.map((colorItem)=>(
-                <img src={colorItem.imageUrl} alt={colorItem.alt} width="72px" height="72px" key={colorItem.id}/>
+                <img src={colorItem.imageUrl} loading="lazy"   alt={colorItem.alt} width="72px" height="72px" key={colorItem.id}/>
             ))
         }
         </div>

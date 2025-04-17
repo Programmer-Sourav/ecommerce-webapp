@@ -49,23 +49,23 @@ export default function Header(){
             </picture>
         </div>
         <div className="nav-menu">
-            <h4 onClick={() => handleNavigation('/products')}>Men</h4>
-            <h4 onClick={() => handleNavigation('/documentation')}>Women</h4>
-            <h4 onClick={() => handleNavigation('/solutions')}>Headwear</h4>
-            <h4 onClick={() => handleNavigation('/support')}>Accessories</h4>
-            <h4 onClick={() => handleNavigation('/support')}>Kids</h4>
-            <h4 onClick={() => handleNavigation('/support')}>Sale</h4>
-            <h4 onClick={() => handleNavigation('/support')}>About</h4>
+            <h4 onClick={() => handleNavigation('/men')}>Men</h4>
+            <h4 onClick={() => handleNavigation('/women')}>Women</h4>
+            <h4 onClick={() => handleNavigation('/headwear')}>Headwear</h4>
+            <h4 onClick={() => handleNavigation('/accessories')}>Accessories</h4>
+            <h4 onClick={() => handleNavigation('/kids')}>Kids</h4>
+            <h4 onClick={() => handleNavigation('/sales')}>Sale</h4>
+            <h4 onClick={() => handleNavigation('/about')}>About</h4>
          </div>
          {showHamburgerMenu ? <div className="menu-list">
             <ul>
-            <li><h4 onClick={() => handleNavigation('/products')}>Men</h4></li>
-            <li><h4 onClick={() => handleNavigation('/documentation')}>Women</h4></li>
-            <li><h4 onClick={() => handleNavigation('/solutions')}>Headwear</h4></li>
-            <li><h4 onClick={() => handleNavigation('/support')}>Accessories</h4></li>
-            <li><h4 onClick={() => handleNavigation('/support')}>Kids</h4></li>
-            <li><h4 onClick={() => handleNavigation('/support')}>Sale</h4></li>
-            <li><h4 onClick={() => handleNavigation('/support')}>About</h4></li>
+            <li><h4 onClick={() => handleNavigation('/men')}>Men</h4></li>
+            <li><h4 onClick={() => handleNavigation('/women')}>Women</h4></li>
+            <li><h4 onClick={() => handleNavigation('/headwear')}>Headwear</h4></li>
+            <li><h4 onClick={() => handleNavigation('/accessories')}>Accessories</h4></li>
+            <li><h4 onClick={() => handleNavigation('/kids')}>Kids</h4></li>
+            <li><h4 onClick={() => handleNavigation('/sales')}>Sale</h4></li>
+            <li><h4 onClick={() => handleNavigation('/about')}>About</h4></li>
             </ul>
          </div> : ""}
          <div className="login-menu">
