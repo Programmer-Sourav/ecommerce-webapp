@@ -25,6 +25,7 @@ import Walnut from "../../assets/colors/walnut.jpg"
 import White from "../../assets/colors/white.jpg"
 import WhiteHeather from "../../assets/colors/white-heather.jpg"
 import Yellow from "../../assets/colors/yellow.jpg"
+import ShimmerItem from "./ShimmerItem"
 
 export default function Carousel(){
 
@@ -100,7 +101,7 @@ export default function Carousel(){
          <img src={LeftArrow} alt="left-arrow" onClick={previousSlide} className="arrow arrow-left"/>
 
             {
-            arrayOfImages.map((item, index)=>(
+           !arrayOfImages ? <ShimmerItem/> : arrayOfImages && arrayOfImages.map((item, index)=>(
                 <CarouselItem key={index} imageUrl={item.imageUrl} loading="lazy" alt={item.alt} isActive={slide === index} />
             ))
             }
