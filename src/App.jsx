@@ -12,6 +12,15 @@ const LazyProductDetails = lazy(()=>import('./pages/ProductDetails'))
 const LazyRegionCheckModal = lazy(()=>import('./components/RegionCheck/RegionCheckModal'))
 const LazyProductDetailsPage = lazy(()=>import('./pages/ProductDetailsPage'))
 import LoadingIndicators from './pages/LoadingIndicators'
+import MidInfoPanel from './components/ProductDetailsPage/MidInfoPanel'
+import AlreadyBoughtItem from './components/AlreadyBoughtItem'
+import CartPage from "./pages/CartPage"
+import LeftCheckout from "./components/LeftCheckout"
+import RightCheckout from "./components/RightCheckout"
+import Checkout from "./pages/Checkout"
+
+
+
 
 
 function App() {
@@ -30,10 +39,16 @@ function App() {
         <LazyPopup/>
         <LazyUsePopup/>
       <LazyCarousel/> */}
+      {/* <MidInfoPanel/> */}
       <Routes>
         <Route path='/' element={<LazyHomePage/>}/>
         <Route path='/home' element={<LazyHomePage/>}/>
         <Route path='/product_details' element={<LazyProductDetailsPage/>}/>
+        <Route path='/already_bought' element={<AlreadyBoughtItem/>}/>
+        <Route path='/cartmodal' element={<CartPage/>}/>
+        <Route path='/leftco' element={<LeftCheckout/>}/>
+        <Route path='/rightco' element={<RightCheckout/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
       </Suspense>
     </>

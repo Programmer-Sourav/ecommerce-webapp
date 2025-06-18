@@ -9,6 +9,7 @@ export default function RightContainer(){
     const [toggleArrow, setToggleArrow] = useState(false)
     const [accordianPosition, setAccordianPosition] = useState(0)
     const [dataArray, setDataArray] = useState([])
+    const [countOfItems, setCountOfItems] = useState(1)
 
     const accordianData1 = {id: 1, title: "Details", data: {Fit : "Relaxed", Fabric: 
         "Heavy weight, 6.5 oz, 22-singles, 100% combed cotton (marles 15% viscose)",
@@ -37,11 +38,11 @@ export default function RightContainer(){
     }
 
     const decrementCountOfItems = () =>{
-
+         setCountOfItems((countOfItems)=>countOfItems -1 )
     }
 
     const incrementCountOfItems = () =>{
-
+            setCountOfItems((countOfItems)=>countOfItems+1)
     }
 
     function getDataForAccordianOne() {
@@ -74,7 +75,7 @@ export default function RightContainer(){
         setAccordianPosition(position)
     }
 
-    console.log(1212, dataArray)
+
     return(
         <div className="rightcontainer">
             <h5>MEN/APPAREL</h5>
@@ -111,22 +112,22 @@ export default function RightContainer(){
          
                 <div className="panel-weight">
                 <div className="left-panel">
-                    <div className="dec-panel" onClick={decrementCountOfItems}>-</div>
-                    <div className="number">1</div>
-                    <div className="inc-panel" onClick={incrementCountOfItems}>+</div>
+                    <div className="dec-panel" onClick={countOfItems>0 ? decrementCountOfItems : ""}>-</div>
+                    <div className="number">{countOfItems}</div>
+                    <div className="inc-panel" onClick={countOfItems>=0 ? incrementCountOfItems  : ""}>+</div>
                 </div>
-                <div className="right-panel">Add 1 item(s) to Cart</div>
+                <div className="right-panel">Add {countOfItems} item(s) to Cart</div>
                 </div>
 
                <div className="accordian-container">
-              <div className="accordian-title"  onClick={()=>{handleChange(toggleArrow=>!toggleArrow, 0)}}><h3>{accordianData1.title}</h3>
+              <div className="accordian-title"  onClick={()=>{handleChange(!toggleArrow, 0)}}><h3>{accordianData1.title}</h3>
               <img
-                src={toggleArrow ? ArrowUp : ArrowDown}
+                src={toggleArrow &&  accordianPosition===0  ? ArrowUp : ArrowDown}
                 alt="Toggle Arrow"
                 className="accordion-arrow"
                />
               </div> 
-              {toggleArrow && accordianPosition==0 && <div className="accordian-content">{dataArray.map((dataItem, index)=>(
+              {toggleArrow && accordianPosition===0  && <div className="accordian-content">{dataArray.map((dataItem, index)=>(
                 index==0 ? (<ul>
                 <p><span><strong>Fit</strong></span> : <span>{dataItem.data["Fit"]}</span></p>
                 <p><span><strong>Fabric</strong></span> : <span>{dataItem.data["Fabric"]}</span></p>
@@ -139,9 +140,9 @@ export default function RightContainer(){
 
 
             <div className="accordian-container">
-              <div className="accordian-title"  onClick={()=>{handleChange(toggleArrow=>!toggleArrow, 1)}}><h3>{accordianData2.title}</h3>
+              <div className="accordian-title"  onClick={()=>{handleChange(!toggleArrow, 1)}}><h3>{accordianData2.title}</h3>
               <img
-                src={toggleArrow ? ArrowUp : ArrowDown}
+                src={toggleArrow && accordianPosition===1 ? ArrowUp : ArrowDown}
                 alt="Toggle Arrow"
                 className="accordion-arrow"
                />
@@ -158,9 +159,9 @@ export default function RightContainer(){
 
 
              <div className="accordian-container">
-              <div className="accordian-title"  onClick={()=>{handleChange(toggleArrow=>!toggleArrow, 3)}}><h3>{accordianData3.title}</h3>
+              <div className="accordian-title"  onClick={()=>{handleChange(!toggleArrow, 3)}}><h3>{accordianData3.title}</h3>
               <img
-                src={toggleArrow ? ArrowUp : ArrowDown}
+                src={toggleArrow && accordianPosition==3 ? ArrowUp : ArrowDown}
                 alt="Toggle Arrow"
                 className="accordion-arrow"
                />
@@ -175,9 +176,9 @@ export default function RightContainer(){
 
 
               <div className="accordian-container">
-              <div className="accordian-title"  onClick={()=>{handleChange(toggleArrow=>!toggleArrow, 4)}}><h3>{accordianData4.title}</h3>
+              <div className="accordian-title"  onClick={()=>{handleChange(!toggleArrow, 4)}}><h3>{accordianData4.title}</h3>
               <img
-                src={toggleArrow ? ArrowUp : ArrowDown}
+                src={toggleArrow && accordianPosition==4 ? ArrowUp : ArrowDown}
                 alt="Toggle Arrow"
                 className="accordion-arrow"
                />
@@ -193,9 +194,9 @@ export default function RightContainer(){
 
 
               <div className="accordian-container">
-              <div className="accordian-title"  onClick={()=>{handleChange(toggleArrow=>!toggleArrow, 5)}}><h3>{accordianData5.title}</h3>
+              <div className="accordian-title"  onClick={()=>{handleChange(!toggleArrow, 5)}}><h3>{accordianData5.title}</h3>
               <img
-                src={toggleArrow ? ArrowUp : ArrowDown}
+                src={toggleArrow && accordianPosition==5 ? ArrowUp : ArrowDown}
                 alt="Toggle Arrow"
                 className="accordion-arrow"
                />
@@ -210,7 +211,6 @@ export default function RightContainer(){
                 </ul>) : ""
               ))}</div>}
               </div> 
-         
         </div>
     )
 }

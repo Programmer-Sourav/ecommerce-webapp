@@ -1,0 +1,22 @@
+.checkout-0 {
+    position: relative;
+    background-color: gainsboro;
+    height: 100dvh;
+}
+
+/* Left-side */
+.div0 {
+    position: absolute;
+    top: 0;
+    width: calc(60% - 32px); /* Adjusted to give space between div0 and div1 */
+    height: 100%;
+}
+
+/* Right-side */
+.div1 {
+    position: absolute;
+    top: 88px;
+    left: calc(60% + 16px); /* Starts where div0 ends + gap */
+    right: 64px; /* Leaves 64px margin on right */
+    height: auto;
+}

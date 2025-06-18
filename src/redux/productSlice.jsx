@@ -20,6 +20,8 @@ const productSlice = createSlice({
         products: [],
         selectedFilters: [],
         selectedFiltersWithoutCategory: [],
+        productPriceDetails: [], //{productSelected: "", price: "", size:""},
+        cartPrice: 0,
         status: "idle", 
         error: null
     },
@@ -30,6 +32,13 @@ const productSlice = createSlice({
            state.status = "idle", 
            state.error = null;
         },
+    priceOperation : (state, action) =>{
+         const cartProduct = {productSelected: action.payload.productSelected, price: action.payload.price, size: action.payload.size}
+         console.log(44433, cartProduct)
+         state.productPriceDetails = [...state.productPriceDetails, cartProduct]
+    },
+
+
     updateCheckbox : (state, action) =>{
         const key = Object.keys(action.payload).toString().toLowerCase();
         const value = Object.values(action.payload).toString().toLowerCase();
@@ -90,6 +99,6 @@ const productSlice = createSlice({
     }
 })
 
-export const { productsOperation, updateCheckbox } = productSlice.actions;
+export const { productsOperation, updateCheckbox, priceOperation } = productSlice.actions;
 export default productSlice.reducer;
 

@@ -13,7 +13,7 @@ export default function SideNavigation(){
   //const [selectedCheckbox, setSelectedCheckbox] = useState([])
   const dispatch = useDispatch();
   const {products, status, error, selectedFilters, selectedFiltersWithoutCategory} = useSelector((state)=>state.products)
-  console.log(666, selectedFilters)
+ 
 
 
 function getTheAccordians(){

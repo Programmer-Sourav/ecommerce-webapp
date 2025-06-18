@@ -112,18 +112,20 @@
 
 /* Responsive Design */
   @media (max-width: 376px) {
-    .header {
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      height: 48px; /* Reduce height for smaller screens */
-      padding: 0 8px;
-      position: fixed;
-      transform: translateY(0); /* Initial position */
-      transition: transform 0.3s ease-in-out; /* Smooth hiding/revealing */
-      z-index: 10;
-      box-sizing: border-box;
-    }
+  .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  padding: 0 8px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+  box-sizing: border-box;
+}
   
     /* Hide full navigation and login menu on small devices */
     .nav-menu,
